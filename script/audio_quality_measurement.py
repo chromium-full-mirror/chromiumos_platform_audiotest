@@ -4,7 +4,7 @@
 # found in the LICENSE file.
 
 """This module provides utilities to detect some artifacts and measure the
-    quality of audio."""
+quality of audio."""
 
 from __future__ import absolute_import
 from __future__ import division
@@ -314,7 +314,7 @@ def hilbert_analysis(signal, rate, block_size):
     phase = numpy.unwrap(numpy.angle(result))
     frequency = numpy.diff(phase) / (2.0 * numpy.pi) * rate
     # frequency.append(frequency[len(frequency)-1])
-    frequecny = numpy.append(frequency, frequency[len(frequency) - 1])
+    frequency = numpy.append(frequency, frequency[len(frequency) - 1])
     return (amplitude, frequency)
 
 
