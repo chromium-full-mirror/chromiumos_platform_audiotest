@@ -109,7 +109,8 @@ void read_wav_file(const char* filename, short** pcm_data) {
   }
 
   // Read the PCM data from the file
-  size_t num_read = fread(*pcm_data, sizeof(short), file_size, file);
+  size_t num_read =
+      fread(*pcm_data, sizeof(short), file_size / sizeof(short), file);
   if (num_read <= 0) {
     fclose(file);
     fprintf(stderr, "Failed to read PCM data from file\n");
