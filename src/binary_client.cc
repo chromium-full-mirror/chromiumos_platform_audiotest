@@ -4,8 +4,10 @@
 
 #include "include/binary_client.h"
 
+#include <errno.h>
 #include <fcntl.h>
 #include <signal.h>
+#include <stdlib.h>
 #include <string.h>
 #include <sys/prctl.h>
 #include <sys/stat.h>
